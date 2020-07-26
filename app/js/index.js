@@ -92,19 +92,39 @@ names.forEach(function(n, index)
 // log("James Bond".startsWith("James"));
 // log("James Bond".endsWith("James"));
 
-logTitle('6. Loops');
+// logTitle('6. Loops');
 
-var persons = [
-   { name: "Bala", age: 40 },
-   { name: "Alex", age: 20 }
-]
+// var persons = [
+//    { name: "Bala", age: 40 },
+//    { name: "Alex", age: 20 }
+// ]
 
-for ( var i =0; i<=persons.length; i++)
-{  log(persons[i].name)
-   log(persons[i].age)
-}
+// for ( var i =0; i<=persons.length; i++)
+// {  log(persons[i].name)
+//    log(persons[i].age)
+// }
 // while
 // do-while
 //break
 //continue
+//if
 
+logTitle('7. Switch');
+
+switch(new Date().getDay()) {
+
+    case 1: log("Monday")
+    break;
+    case 2: log("Tuesday")
+    break;
+    case 3: log("wednesday")
+    break;
+    case 4: log("Thursday")
+    break;
+    case 5: log("Friday")
+    break;
+    case 6: log("Saturday")
+    break;
+    case 0: log("Sunday")
+    break;
+}
