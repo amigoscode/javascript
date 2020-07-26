@@ -220,16 +220,26 @@ names.forEach(function(n, index)
 // log(animal.getClassType());
 
 
-logTitle("13. Variable Scope & LET");
+// logTitle("13. Variable Scope & LET");
 
-// for ( var i =0; i < 10; i++){
+// // for ( var i =0; i < 10; i++){
+// //     log(i)
+// // }
+// // log(i)
+// // log("\n")
+
+// for ( let i =0; i < 10; i++){
 //     log(i)
 // }
 // log(i)
 // log("\n")
 
-for ( let i =0; i < 10; i++){
-    log(i)
-}
-log(i)
-log("\n")
+logTitle("14. Const Keyword")
+
+const person = {};
+person['name'] = "Maria"
+log(person.name)
+
+const array = []
+array.push('Maria from Array')
+log(array[0])
