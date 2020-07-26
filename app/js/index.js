@@ -156,25 +156,39 @@ names.forEach(function(n, index)
 // log(typeof 1 + " " + typeof "1")
 // log(1 === "1")
 
-logTitle('9. Maps | Filter |Reduce')
+// logTitle('9. Maps | Filter |Reduce')
 
-var map = [1,2,3,4,5].map(function(n) {
-    return n*n;
+// var map = [1,2,3,4,5].map(function(n) {
+//     return n*n;
+// })
+
+// log("[].map")
+// log(map+"\n");
+
+// var filter = [1,2,3,4,5, 66, 87, 100].filter(function(n) {
+//     return n%2==0 && n>5
+// })
+
+// log("[].filter")
+// log(filter+"\n");
+
+// var reduce = [1,2,3,4,5].reduce(function(accumulator, current) {
+//     return accumulator + current
+// })
+
+// log("[].reduce")
+// log(reduce+"\n");
+
+logTitle('10. Callbacks')
+
+function callbackExample(name, callback) {
+    log (callback(name))
+}
+
+// var callback = function(name) {
+//     return "Hello " + name;
+// }
+
+callbackExample("Anna Maria", function(name) {
+    return "Hello " + name;
 })
-
-log("[].map")
-log(map+"\n");
-
-var filter = [1,2,3,4,5, 66, 87, 100].filter(function(n) {
-    return n%2==0 && n>5
-})
-
-log("[].filter")
-log(filter+"\n");
-
-var reduce = [1,2,3,4,5].reduce(function(accumulator, current) {
-    return accumulator + current
-})
-
-log("[].reduce")
-log(reduce+"\n");
