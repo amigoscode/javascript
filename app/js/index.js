@@ -262,27 +262,44 @@ names.forEach(function(n, index)
 // log(greeting)
 // log(firstName.length); // Hi John, Doe
 
-logTitle("16. Spread operator Arrays")
+// logTitle("16. Spread operator Arrays")
 
-const arrayOne = ['Maria', 'Anna', 'Alex']
-const arrayTwo = ['Olesi', 'Bahu', 'Serin']
+// const arrayOne = ['Maria', 'Anna', 'Alex']
+// const arrayTwo = ['Olesi', 'Bahu', 'Serin']
 
-const concatArray = [...arrayOne, ...arrayTwo]
+// const concatArray = [...arrayOne, ...arrayTwo]
 
-concatArray.forEach(function(name) {
-    log(name)
-})
+// concatArray.forEach(function(name) {
+//     log(name)
+// })
 
-const name = "Bhatawadekar"
-const nametoCharArray = [...name]
-nametoCharArray.forEach(function(letter) {
-    log(letter)
-})
+// const name = "Bhatawadekar"
+// const nametoCharArray = [...name]
+// nametoCharArray.forEach(function(letter) {
+//     log(letter)
+// })
 
-const addNumbers = function(n1,n2,n3,n4,n5,n6,n7){
-return n1+n2+n3+n4+n5+n6+n7
+// const addNumbers = function(n1,n2,n3,n4,n5,n6,n7){
+// return n1+n2+n3+n4+n5+n6+n7
+// }
+
+// const numbers = [1,2,3,4,5,6,7]
+// const addition = addNumbers(...numbers)
+// log(addition)
+
+
+logTitle("17. Spread Operator Objects")
+
+const address = {
+    city: 'Detroit',
+    country: 'USA',
+    zipcode: 48304
 }
 
-const numbers = [1,2,3,4,5,6,7]
-const addition = addNumbers(...numbers)
-log(addition)
+const name = {
+    firstName: 'James',
+    lastName: 'Bond'
+}
+
+const person = {...address, ...name}
+log(JSON.stringify(person, null, 2))
