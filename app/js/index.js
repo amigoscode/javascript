@@ -196,7 +196,7 @@ names.forEach(function(n, index)
 
 
 /* your imports */
-//import * as Math from './Math'
+// import * as Math from './Math'
 // import * as Math from './Math'
 // logTitle("11. Named Exports / Imports")
 
@@ -204,9 +204,17 @@ names.forEach(function(n, index)
 // log(Math.divide(36,6))
 // log(Math.pi)
 
-/* or if just selective function */
+// /* or if just selective function */
 
-import {divide, pi} from './Math'
-// log(add(8,2))
-log(divide(36,6))
-log(pi)
+// import {divide, pi} from './Math'
+
+// log(divide(36,6))
+// log(pi)
+
+import Animal from './Animal'
+logTitle("12. Default Exports / Imports");
+
+var animal = new Animal();
+log(animal.getClassType());
+
+
