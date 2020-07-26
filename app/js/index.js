@@ -36,16 +36,16 @@ import { log, logTitle } from 'logger';
 // log(JSON.stringify(person.address)+"\n")
 // log(Object.values(person)+"\n")
 
-logTitle('Arrays');
+// logTitle('Arrays');
 
-var names = ["Alex", "Maria", "Sam", "Kelly"]
-log(names)
-log(names[0])
-log(names.length)
+// var names = ["Alex", "Maria", "Sam", "Kelly"]
+// log(names)
+// log(names[0])
+// log(names.length)
 
-for (var n of names) { log(n)}
+// for (var n of names) { log(n)}
 
-for (var n in names) { log(n + " - " + names[n])} 
+// for (var n in names) { log(n + " - " + names[n])} 
 /* or
 
 names.forEach(function(n, index)
@@ -56,4 +56,16 @@ names.forEach(function(n, index)
 
 */
 
+logTitle('Arithmetic Operators');
 
+var add = 2+3
+var subt = 2-3
+var div = 2/3
+var multi = 2*3
+var rem = 2%3
+
+log (add)
+log (subt)
+log (div)
+log (multi)
+log (rem)
