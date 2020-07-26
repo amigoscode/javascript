@@ -70,22 +70,41 @@ names.forEach(function(n, index)
 // log (multi)
 // log (rem)
 
-logTitle('5. Functions');
+// logTitle('5. Functions');
 
-function addNumbers (a,b) {
-    return a+b;
-}
-var result = addNumbers(4,5);
-log(result);
+// function addNumbers (a,b) {
+//     return a+b;
+// }
+// var result = addNumbers(4,5);
+// log(result);
 
-log(Object.keys({name: "Anna", age: 21}));
-log(Object.values({name: "anna", age: 21}))
+// log(Object.keys({name: "Anna", age: 21}));
+// log(Object.values({name: "anna", age: 21}))
+// /*
 // log("OR another method using variable person")
 // var person = {name: "anna", age: 21};
 // log(Object.keys(person))
 // log(Object.values(person))
+// */
 
-log("James Bond".toLowerCase());
-log("James Bond".toLowerCase());
-log("James Bond".startsWith("James"));
-log("James Bond".endsWith("James"));
+// log("James Bond".toLowerCase());
+// log("James Bond".toLowerCase());
+// log("James Bond".startsWith("James"));
+// log("James Bond".endsWith("James"));
+
+logTitle('6. Loops');
+
+var persons = [
+   { name: "Bala", age: 40 },
+   { name: "Alex", age: 20 }
+]
+
+for ( var i =0; i<=persons.length; i++)
+{  log(persons[i].name)
+   log(persons[i].age)
+}
+// while
+// do-while
+//break
+//continue
+
