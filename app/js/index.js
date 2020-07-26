@@ -234,12 +234,29 @@ names.forEach(function(n, index)
 // log(i)
 // log("\n")
 
-logTitle("14. Const Keyword")
+// logTitle("14. Const Keyword")
 
-const person = {};
-person['name'] = "Maria"
-log(person.name)
+// const person = {};
+// person['name'] = "Maria"
+// log(person.name)
 
-const array = []
-array.push('Maria from Array')
-log(array[0])
+// const array = []
+// array.push('Maria from Array')
+// log(array[0])
+
+logTitle("15. Template Literals")
+
+let name = 'Anna';
+const age = 22;
+const country = 'USA';
+
+log ("Name: "+ name + ", Country: " + country + ", Age: " + age )
+log("\n");
+log(`Name: ${name} , Country: ${country.length} , Age: ${age}`);
+
+let firstName = 'John',
+    lastName = 'Doe';
+
+let greeting = `Hi ${firstName}, ${lastName}`;
+log(greeting)
+log(firstName.length); // Hi John, Doe
