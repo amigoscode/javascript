@@ -179,16 +179,34 @@ names.forEach(function(n, index)
 // log("[].reduce")
 // log(reduce+"\n");
 
-logTitle('10. Callbacks')
+// logTitle('10. Callbacks')
 
-function callbackExample(name, callback) {
-    log (callback(name))
-}
-
-// var callback = function(name) {
-//     return "Hello " + name;
+// function callbackExample(name, callback) {
+//     log (callback(name))
 // }
 
-callbackExample("Anna Maria", function(name) {
-    return "Hello " + name;
-})
+// // var callback = function(name) {
+// //     return "Hello " + name;
+// // }
+
+// callbackExample("Anna Maria", function(name) {
+//     return "Hello " + name;
+// })
+
+
+
+/* your imports */
+//import * as Math from './Math'
+// import * as Math from './Math'
+// logTitle("11. Named Exports / Imports")
+
+// log(Math.add(8,2))
+// log(Math.divide(36,6))
+// log(Math.pi)
+
+/* or if just selective function */
+
+import {divide, pi} from './Math'
+// log(add(8,2))
+log(divide(36,6))
+log(pi)
