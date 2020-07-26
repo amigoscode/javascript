@@ -4,7 +4,7 @@ require('styles/main.scss');
 import $ from 'jquery';
 import { log, logTitle } from 'logger';
 /* your imports */
-// logTitle('Variables')
+// logTitle('2. Variables')
 /* coding examples */
 
 // var name = "Maria Jones";
@@ -36,7 +36,7 @@ import { log, logTitle } from 'logger';
 // log(JSON.stringify(person.address)+"\n")
 // log(Object.values(person)+"\n")
 
-// logTitle('Arrays');
+// logTitle('3. Arrays');
 
 // var names = ["Alex", "Maria", "Sam", "Kelly"]
 // log(names)
@@ -56,16 +56,36 @@ names.forEach(function(n, index)
 
 */
 
-logTitle('Arithmetic Operators');
+// logTitle('4. Arithmetic Operators');
 
-var add = 2+3
-var subt = 2-3
-var div = 2/3
-var multi = 2*3
-var rem = 2%3
+// var add = 2+3
+// var subt = 2-3
+// var div = 2/3
+// var multi = 2*3
+// var rem = 2%3
 
-log (add)
-log (subt)
-log (div)
-log (multi)
-log (rem)
+// log (add)
+// log (subt)
+// log (div)
+// log (multi)
+// log (rem)
+
+logTitle('5. Functions');
+
+function addNumbers (a,b) {
+    return a+b;
+}
+var result = addNumbers(4,5);
+log(result);
+
+log(Object.keys({name: "Anna", age: 21}));
+log(Object.values({name: "anna", age: 21}))
+// log("OR another method using variable person")
+// var person = {name: "anna", age: 21};
+// log(Object.keys(person))
+// log(Object.values(person))
+
+log("James Bond".toLowerCase());
+log("James Bond".toLowerCase());
+log("James Bond".startsWith("James"));
+log("James Bond".endsWith("James"));
