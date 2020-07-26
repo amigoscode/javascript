@@ -129,29 +129,52 @@ names.forEach(function(n, index)
 //     break;
 // }
 
-logTitle('8. Logical Operators/Type coersion');
+// logTitle('8. Logical Operators/Type coersion');
 
-/*  ==, !=, <, >, <=, >= */
+// /*  ==, !=, <, >, <=, >= */
 
-log("With type coersion")
+// log("With type coersion")
 
-log(typeof 0 + " " + typeof false)
-log(0 == false)
+// log(typeof 0 + " " + typeof false)
+// log(0 == false)
 
-log(typeof "0" + " " + typeof false)
-log("0" == false)
+// log(typeof "0" + " " + typeof false)
+// log("0" == false)
 
-log(typeof 1 + " " + typeof "1")
-log(1 == "1")
+// log(typeof 1 + " " + typeof "1")
+// log(1 == "1")
 
-log("\n")
-log("Without type coersion")
+// log("\n")
+// log("Without type coersion")
 
-log(typeof 0 + " " + typeof false)
-log(0 === false)
+// log(typeof 0 + " " + typeof false)
+// log(0 === false)
 
-log(typeof "0" + " " + typeof false)
-log("0" === false)
+// log(typeof "0" + " " + typeof false)
+// log("0" === false)
 
-log(typeof 1 + " " + typeof "1")
-log(1 === "1")
+// log(typeof 1 + " " + typeof "1")
+// log(1 === "1")
+
+logTitle('9. Maps | Filter |Reduce')
+
+var map = [1,2,3,4,5].map(function(n) {
+    return n*n;
+})
+
+log("[].map")
+log(map+"\n");
+
+var filter = [1,2,3,4,5, 66, 87, 100].filter(function(n) {
+    return n%2==0 && n>5
+})
+
+log("[].filter")
+log(filter+"\n");
+
+var reduce = [1,2,3,4,5].reduce(function(accumulator, current) {
+    return accumulator + current
+})
+
+log("[].reduce")
+log(reduce+"\n");
