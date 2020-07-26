@@ -211,10 +211,25 @@ names.forEach(function(n, index)
 // log(divide(36,6))
 // log(pi)
 
-import Animal from './Animal'
-logTitle("12. Default Exports / Imports");
-
-var animal = new Animal();
-log(animal.getClassType());
 
 
+// import Animal from './Animal'
+// logTitle("12. Default Exports / Imports");
+
+// var animal = new Animal();
+// log(animal.getClassType());
+
+
+logTitle("13. Variable Scope & LET");
+
+// for ( var i =0; i < 10; i++){
+//     log(i)
+// }
+// log(i)
+// log("\n")
+
+for ( let i =0; i < 10; i++){
+    log(i)
+}
+log(i)
+log("\n")
