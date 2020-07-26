@@ -109,22 +109,49 @@ names.forEach(function(n, index)
 //continue
 //if
 
-logTitle('7. Switch');
+// logTitle('7. Switch');
 
-switch(new Date().getDay()) {
+// switch(new Date().getDay()) {
 
-    case 1: log("Monday")
-    break;
-    case 2: log("Tuesday")
-    break;
-    case 3: log("wednesday")
-    break;
-    case 4: log("Thursday")
-    break;
-    case 5: log("Friday")
-    break;
-    case 6: log("Saturday")
-    break;
-    case 0: log("Sunday")
-    break;
-}
+//     case 1: log("Monday")
+//     break;
+//     case 2: log("Tuesday")
+//     break;
+//     case 3: log("wednesday")
+//     break;
+//     case 4: log("Thursday")
+//     break;
+//     case 5: log("Friday")
+//     break;
+//     case 6: log("Saturday")
+//     break;
+//     case 0: log("Sunday")
+//     break;
+// }
+
+logTitle('8. Logical Operators/Type coersion');
+
+/*  ==, !=, <, >, <=, >= */
+
+log("With type coersion")
+
+log(typeof 0 + " " + typeof false)
+log(0 == false)
+
+log(typeof "0" + " " + typeof false)
+log("0" == false)
+
+log(typeof 1 + " " + typeof "1")
+log(1 == "1")
+
+log("\n")
+log("Without type coersion")
+
+log(typeof 0 + " " + typeof false)
+log(0 === false)
+
+log(typeof "0" + " " + typeof false)
+log("0" === false)
+
+log(typeof 1 + " " + typeof "1")
+log(1 === "1")
