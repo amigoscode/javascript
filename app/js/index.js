@@ -4,7 +4,7 @@ require('styles/main.scss');
 import $ from 'jquery';
 import { log, logTitle } from 'logger';
 /* your imports */
-logTitle('Variables')
+// logTitle('Variables')
 /* coding examples */
 
 // var name = "Maria Jones";
@@ -17,21 +17,43 @@ logTitle('Variables')
 // log(hasDriverLicense + " " + "type = " + typeof hasDriverLicense);
 // log(empty + " " + "type = " + typeof empty);
 
-var person = {
-    name: "Maria Jones",
-    age: 21,
-    hasDriverLicense: true,
-    dateOfBirth: "01/01/2000",
-    address: {
+// var person = {
+//     name: "Maria Jones",
+//     age: 21,
+//     hasDriverLicense: true,
+//     dateOfBirth: "01/01/2000",
+//     address: {
 
-        firstLine: "230 Burham St",
-        city: "Cleveland",
-        state: "Ohio"
-    }
-};
+//         firstLine: "230 Burham St",
+//         city: "Cleveland",
+//         state: "Ohio"
+//     }
+// };
 
-// log(person+"\n"); 
-// log(JSON.stringify(person)+"\n")
-// log(person.name+"\n")
-log(JSON.stringify(person.address)+"\n")
-log(Object.values(person)+"\n")
+// // log(person+"\n"); 
+// // log(JSON.stringify(person)+"\n")
+// // log(person.name+"\n")
+// log(JSON.stringify(person.address)+"\n")
+// log(Object.values(person)+"\n")
+
+logTitle('Arrays');
+
+var names = ["Alex", "Maria", "Sam", "Kelly"]
+log(names)
+log(names[0])
+log(names.length)
+
+for (var n of names) { log(n)}
+
+for (var n in names) { log(n + " - " + names[n])} 
+/* or
+
+names.forEach(function(n, index)
+{
+    log(index+ " - "+n)
+
+})
+
+*/
+
+
