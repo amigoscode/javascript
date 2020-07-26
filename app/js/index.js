@@ -3,6 +3,7 @@ require('styles/main.scss');
 /* js */
 import $ from 'jquery';
 import { log, logTitle } from 'logger';
+import { add } from './Math';
 /* your imports */
 // logTitle('2. Variables')
 /* coding examples */
@@ -244,19 +245,44 @@ names.forEach(function(n, index)
 // array.push('Maria from Array')
 // log(array[0])
 
-logTitle("15. Template Literals")
+// logTitle("15. Template Literals")
 
-let name = 'Anna';
-const age = 22;
-const country = 'USA';
+// let name = 'Anna';
+// const age = 22;
+// const country = 'USA';
 
-log ("Name: "+ name + ", Country: " + country + ", Age: " + age )
-log("\n");
-log(`Name: ${name} , Country: ${country.length} , Age: ${age}`);
+// log ("Name: "+ name + ", Country: " + country + ", Age: " + age )
+// log("\n");
+// log(`Name: ${name} , Country: ${country.length} , Age: ${age}`);
 
-let firstName = 'John',
-    lastName = 'Doe';
+// let firstName = 'John',
+//     lastName = 'Doe';
 
-let greeting = `Hi ${firstName}, ${lastName}`;
-log(greeting)
-log(firstName.length); // Hi John, Doe
+// let greeting = `Hi ${firstName}, ${lastName}`;
+// log(greeting)
+// log(firstName.length); // Hi John, Doe
+
+logTitle("16. Spread operator Arrays")
+
+const arrayOne = ['Maria', 'Anna', 'Alex']
+const arrayTwo = ['Olesi', 'Bahu', 'Serin']
+
+const concatArray = [...arrayOne, ...arrayTwo]
+
+concatArray.forEach(function(name) {
+    log(name)
+})
+
+const name = "Bhatawadekar"
+const nametoCharArray = [...name]
+nametoCharArray.forEach(function(letter) {
+    log(letter)
+})
+
+const addNumbers = function(n1,n2,n3,n4,n5,n6,n7){
+return n1+n2+n3+n4+n5+n6+n7
+}
+
+const numbers = [1,2,3,4,5,6,7]
+const addition = addNumbers(...numbers)
+log(addition)
