@@ -324,17 +324,36 @@ names.forEach(function(n, index)
 //   log(add(100,100));
 //   log(milesToKm(100));
 
-logTitle("19. Lexicals this")
+// logTitle("19. Lexicals this")
 
-const person = {
-    name: 'Alex',
-    cars: ['Ferrari', ' Porsche'],
-    toString: function() {
-        // log(`${this.name} has ${this.cars}`)
-        this.cars.forEach( car => {
-        log(`${this.name} has ${car}`)
-        })
-    } 
+// const person = {
+//     name: 'Alex',
+//     cars: ['Ferrari', ' Porsche'],
+//     toString: function() {
+//         // log(`${this.name} has ${this.cars}`)
+//         this.cars.forEach( car => {
+//         log(`${this.name} has ${car}`)
+//         })
+//     } 
+// }
+
+// person.toString()
+
+logTitle("20. Enhanced Object Properties")
+
+const pricePropName = "PRICE"
+
+const calculator = (name, price) => {
+    return {
+        name,
+        /* or add: (n1,n2) => n1+n2 */ 
+        add(n1,n2) { return n1+n2 },
+    
+       [pricePropName.toLowerCase()] : price
+    }
 }
 
-person.toString()
+const calc = calculator('casio', 19.99)
+log (calc.name)
+log(calc.add(-1,20))
+log(calc.price)
