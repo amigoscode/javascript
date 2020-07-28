@@ -339,21 +339,36 @@ names.forEach(function(n, index)
 
 // person.toString()
 
-logTitle("20. Enhanced Object Properties")
+// logTitle("20. Enhanced Object Properties")
 
-const pricePropName = "PRICE"
+// const pricePropName = "PRICE"
 
-const calculator = (name, price) => {
-    return {
-        name,
-        /* or add: (n1,n2) => n1+n2 */ 
-        add(n1,n2) { return n1+n2 },
+// const calculator = (name, price) => {
+//     return {
+//         name,
+//         /* or add: (n1,n2) => n1+n2 */ 
+//               add(n1,n2) { return n1+n2 },
     
-       [pricePropName.toLowerCase()] : price
-    }
-}
+//        [pricePropName.toLowerCase()] : price
+//     }
+// }
 
-const calc = calculator('casio', 19.99)
-log (calc.name)
-log(calc.add(-1,20))
-log(calc.price)
+// const calc = calculator('casio', 19.99)
+// log (calc.name)
+// log(calc.add(-1,20))
+// log(calc.price)
+
+
+logTitle("21. Array Destructuring")
+
+const names = ['Anna', 'Mariam', 'Joe', 'Mark', 'Matt'];
+// const n1 = names[0];
+// const n2 = names[1];
+// const n3 = names[2];
+ 
+/* OR */
+
+const [n1, ,n3,...restOfNames] = names;
+
+log(`${n1} ${n3}`);
+log(restOfNames)
