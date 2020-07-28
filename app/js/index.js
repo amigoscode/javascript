@@ -306,20 +306,35 @@ names.forEach(function(n, index)
 
 
 
-logTitle("18. Arrow Functions")
+// logTitle("18. Arrow Functions")
 
-const hello = () => {
-    const es6 = 'ES6';
-    return `Hello ${es6}`;
-  };
+// const hello = () => {
+//     const es6 = 'ES6';
+//     return `Hello ${es6}`;
+//   };
   
-const powers = [1,2,3,4,5].map((number, index) => Math.pow(number, index));
+// const powers = [1,2,3,4,5].map((number, index) => Math.pow(number, index));
   
-const add = (n1, n2) => n1+n2
+// const add = (n1, n2) => n1+n2
   
-const milesToKm = (miles) => miles * 1.60934;
+// const milesToKm = (miles) => miles * 1.60934;
   
-  log(hello());
-  log(powers);
-  log(add(100,100));
-  log(milesToKm(100));
+//   log(hello());
+//   log(powers);
+//   log(add(100,100));
+//   log(milesToKm(100));
+
+logTitle("19. Lexicals this")
+
+const person = {
+    name: 'Alex',
+    cars: ['Ferrari', ' Porsche'],
+    toString: function() {
+        // log(`${this.name} has ${this.cars}`)
+        this.cars.forEach( car => {
+        log(`${this.name} has ${car}`)
+        })
+    } 
+}
+
+person.toString()
