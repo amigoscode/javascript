@@ -3,7 +3,7 @@ require('styles/main.scss');
 /* js */
 import $ from 'jquery';
 import { log, logTitle } from 'logger';
-import { add } from './Math';
+// import { add } from './Math';
 /* your imports */
 // logTitle('2. Variables')
 /* coding examples */
@@ -288,18 +288,38 @@ names.forEach(function(n, index)
 // log(addition)
 
 
-logTitle("17. Spread Operator Objects")
+// logTitle("17. Spread Operator Objects")
 
-const address = {
-    city: 'Detroit',
-    country: 'USA',
-    zipcode: 48304
-}
+// const address = {
+//     city: 'Detroit',
+//     country: 'USA',
+//     zipcode: 48304
+// }
 
-const name = {
-    firstName: 'James',
-    lastName: 'Bond'
-}
+// const name = {
+//     firstName: 'James',
+//     lastName: 'Bond'
+// }
 
-const person = {...address, ...name}
-log(JSON.stringify(person, null, 2))
+// const person = {...address, ...name}
+// log(JSON.stringify(person, null, 2))
+
+
+
+logTitle("18. Arrow Functions")
+
+const hello = () => {
+    const es6 = 'ES6';
+    return `Hello ${es6}`;
+  };
+  
+const powers = [1,2,3,4,5].map((number, index) => Math.pow(number, index));
+  
+const add = (n1, n2) => n1+n2
+  
+const milesToKm = (miles) => miles * 1.60934;
+  
+  log(hello());
+  log(powers);
+  log(add(100,100));
+  log(milesToKm(100));
