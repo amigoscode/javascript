@@ -4,67 +4,46 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = env => {
   return {
-    entry: ["babel-polyfill", __dirname + "/app/js"],
-    output: {
-      path: path.join(__dirname, "build"),
-      filename: "bundle.js"
-    },
-    module: {
-      rules: [
+    entry : [ "@babel/polyfill", __dirname + "/app/js" ],
+    mode : 'development',
+    output : {path : path.join(__dirname, "build"), filename : "bundle.js"},
+    module : {
+      rules : [
         {
-          test: /\.js$/,
-          loader: "babel-loader",
-          exclude: /node_modules/,
-          options: {
-            presets: ["react", "stage-3", ["es2015", { modules: false }]],
-            plugins: [
-              "transform-function-bind",
-              [
-                "transform-runtime",
-                {
-                  regenerator: true
-                }
-              ]
-            ]
-          }
+          test : /\.js$/,
+          loader : "babel-loader",
+          exclude : /node_modules/,
+          options : {presets : [ "@babel/preset-env" ]}
+        },
+        {test : /\.css$/, use : [ "style-loader", "css-loader" ]}, {
+          test : /\.scss$/,
+          use : [ "style-loader", "css-loader", "sass-loader" ]
         },
         {
-          test: /\.css$/,
-          use: ["style-loader", "css-loader"]
-        },
-        {
-          test: /\.scss$/,
-          use: ["style-loader", "css-loader", "sass-loader"]
-        },
-        {
-          test: /\.(png|woff|woff2|eot|ttf|svg|jpg)(\?.*$|$)/,
-          use: "url-loader?limit=100000"
+          test : /\.(png|woff|woff2|eot|ttf|svg|jpg)(\?.*$|$)/,
+          use : [ {loader : "url-loader", options : {limit : 100000}} ]
         }
       ]
     },
-    resolve: {
-      extensions: [".js", ".css", ".scss", ".json"],
-      alias: {
-        components: path.resolve(__dirname, "app", "js", "components"),
-        logger$: path.resolve(__dirname, "app", "js", "logger", "index.js"),
-        styles: path.resolve(__dirname, "app", "styles")
+    resolve : {
+      extensions : [ ".js", ".css", ".scss", ".json" ],
+      alias : {
+        components : path.resolve(__dirname, "app", "js", "components"),
+        logger$ : path.resolve(__dirname, "app", "js", "logger", "index.js"),
+        styles : path.resolve(__dirname, "app", "styles")
       }
     },
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        Tether: "tether"
-      }),
-      new htmlWebpackPlugin({
-        template: path.resolve(__dirname, "app", "index.html")
-      })
+    plugins : [
+      new webpack.ProvidePlugin(
+          {$ : "jquery", jQuery : "jquery", Tether : "tether"}),
+      new htmlWebpackPlugin(
+          {template : path.resolve(__dirname, "app", "index.html")})
     ],
-    devServer: {
-      contentBase: path.resolve(__dirname, "build"),
-      inline: true,
-      port: 3000
+    devServer : {
+      contentBase : path.resolve(__dirname, "build"),
+      inline : true,
+      port : 3000
     },
-    devtool: "source-map"
+    devtool : "source-map"
   };
 };
