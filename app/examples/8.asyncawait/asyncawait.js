@@ -10,7 +10,7 @@ logTitle("Async Await");
 const logName = async (name) => {
   log(name);
   // 1. we can yield promises using await
-  //Test comment
+  //Test comment - LALALA
   const transformName = new Promise((resolve, reject) => {
     setTimeout(() => resolve(name.toUpperCase()), 1000);
   });
